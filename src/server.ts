@@ -40,6 +40,9 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
           let filesList: string[] = [result];
           deleteLocalFiles(filesList);
         }
+        else{
+          console.log("error-> ",err);
+        }
       });
     }).catch(() => {
       return res.status(422).send("UNPROCESSABLE can't process the image");
